@@ -25,9 +25,9 @@
         window.CustomEvent.prototype = window.Event.prototype;
     }
 
-    document.addEventListener('touchstart', handleTouchStart, false);
-    document.addEventListener('touchmove', handleTouchMove, false);
-    document.addEventListener('touchend', handleTouchEnd, false);
+    document.addEventListener('touchstart', handleTouchStart, {passive: true});
+    document.addEventListener('touchmove', handleTouchMove, {passive: true});
+    document.addEventListener('touchend', handleTouchEnd, {passive: true});
 
     var xDown = null;
     var yDown = null;
